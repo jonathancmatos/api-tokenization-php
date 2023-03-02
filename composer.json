@@ -1,0 +1,32 @@
+{
+  "name": "jonathancmatos/api-tokenization-php",
+  "description": "API de autenticação utilizando token de segurança",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Jonathan C Matos",
+      "email": "contato@devjonathancosta.com",
+      "homepage": "https://devjonathancosta.com",
+      "role": "Developer"
+    }
+  ],
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "autoload": {
+    "psr-4": {
+      "Source\\": "source/"
+    },
+    "files": [
+      "source/Boot/Config.php",
+      "source/Boot/Helpers.php"
+    ]
+  },
+  "require": {
+    "ext-json": "*",
+    "coffeecode/router": "1.0.8",
+    "illuminate/database": "8.x-dev",
+    "firebase/php-jwt": "v6.4.0"
+  }
+}
