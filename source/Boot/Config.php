@@ -6,29 +6,36 @@ date_default_timezone_set("America/Sao_Paulo");
 /**
  * DATABASE
  */
-define("CONF_DATABASE",[
-   "drive" => "mysql",
-   "host" => "localhost",
+const CONF_DATABASE = [
+    "driver" => "mysql",
+    "host" => "localhost",
     "database" => "db_tokenization",
     "username" => "root",
     "password" => "",
     "charset" => "utf8",
     "collation" => "utf8_unicode_ci",
     "prefix" => ""
-]);
+];
 
 
 /**
  * PROJECT URLs
  */
-define("CONF_URL_BASE", "http://localhost/api-tokenization/");
+const CONF_URL_BASE = "http://localhost/api-tokenization/";
 
 
 /**
  * PASSWORDS
  */
-define("CONF_PASSWD_MIN_LEN", 8);
-define("CONF_PASSWD_ALGO", PASSWORD_DEFAULT);
-define("CONF_PASSWD_OPTION", ["cost" => 10]);
+const CONF_PASSWD_MIN_LEN = 8;
+const CONF_PASSWD_OPTION = ["cost" => 10];
+
+
+/**
+ * TOKEN KEY
+ */
+const KEY_SECRETED_TOKEN = "7DF21572CF63C49E7145DE3E6E7B5";
+const ACCESS_TOKEN_EXPIRY = 120; //2 minutes
+const REFRESH_TOKEN_EXPIRY = 86400 ; //1 day
 
 ?>

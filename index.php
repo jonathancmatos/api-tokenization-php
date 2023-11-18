@@ -39,6 +39,23 @@ $router->get("/{errcode}", function ($data){
 });
 
 
+
+/**
+ * STACK_API
+ */
+$router->group("/api");
+
+/** AUTH **/
+$router->post("/signup","Users:signUp");
+$router->post("/signin","Users:signIn");
+$router->post("/google-sign-in","Users:googleSignIn");
+$router->get("/current-user","Users:currentUser");
+$router->post("/logout","Users:logout");
+
+/** TOKEN **/
+$router->post("/refresh-token", "Tokens:refresh");
+
+
 /**
  *ROUTER
  */
