@@ -33,6 +33,11 @@ abstract class Controller{
 
             $authorization = $_SERVER["HTTP_AUTHORIZATION"];
             list($accessToken) = sscanf($authorization, 'Bearer %s');
+            if(empty($accessToken)){
+                $this->call(401,"unauthorized","Você não tem autorizacão para continuar.")->back();
+                exit();
+            }
+
             $this->auth($accessToken);
         }
     }
